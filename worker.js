@@ -8,4 +8,8 @@ onmessage = function(e) {
     console.log('Worker: Posting message back to main script');
     postMessage(workerResult);
   }
+    /* eslint-disable no-undef */
+    console.log("** Scripts1.js: execute importScripts");
+    importScripts("http://localhost:3333/assets/sdk/AcuantImageProcessingWorker.min.js");
+    /* eslint-enable no-undef */
 }
